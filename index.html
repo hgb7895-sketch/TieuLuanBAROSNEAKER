@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BAROSNEAKER - Cửa Hàng Giày Thể Thao Chính Hãng</title>
+    <link rel="icon" href="/img/logo.png" type="image/png" />
+    <link rel="stylesheet" href="CSS/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <nav>
+          <div class="nav-logo">
+            <a href="index.html" style="width: 32px; height: 32px">
+              <img src="/img/logo.png" alt="logo" />
+            </a>
+            <a href="index.html" class="logo">BAROSNEAKER</a>
+          </div>
+          <div class="nav-links">
+            <a href="index.html" class="active">Trang chủ</a>
+            <a href="about_me.html">Về chúng tôi</a>
+            <button
+              id="cart-button"
+              title="Giỏ hàng"
+              onclick="window.location.href='cart.html'"
+            >
+              🛒
+              <span id="cart-count">0</span>
+            </button>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section id="products-section">
+        <div id="imageSlider" class="slider-container">
+          <div class="slider-track">
+            <div class="slider-item">
+              <img src="img/slider1.jpg" alt="Bộ sưu tập mới" />
+              <div class="slider-caption">
+                <h3>Bộ Sưu Tập Mới Nhất</h3>
+                <p>Khám phá phong cách độc đáo!</p>
+                <a href="#filter-menu" class="slider-cta-button">Xem ngay</a>
+              </div>
+            </div>
+            <div class="slider-item">
+              <img src="img/slider2.jpg" alt="Giảm giá lớn" />
+              <div class="slider-caption">
+                <h3>Ưu Đãi Đặc Biệt</h3>
+                <p>Giảm giá lên đến 30% cho các sản phẩm chọn lọc.</p>
+                <a href="#filter-menu" class="slider-cta-button">Mua ngay</a>
+              </div>
+            </div>
+            <div class="slider-item">
+              <img src="img/slider3.jpg" alt="Sản phẩm hot" />
+              <div class="slider-caption">
+                <h3>Sản Phẩm HOT Nhất</h3>
+                <p>Đừng bỏ lỡ những đôi giày đang làm mưa làm gió!</p>
+                <a href="#filter-menu" class="slider-cta-button"
+                  >Xem chi tiết</a
+                >
+              </div>
+            </div>
+          </div>
+
+          <button class="slider-button prev" onclick="moveSlider(-1)">
+            &#10094;
+          </button>
+          <button class="slider-button next" onclick="moveSlider(1)">
+            &#10095;
+          </button>
+
+          <div class="slider-dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+        </div>
+
+        <h2>Bộ Sưu Tập</h2>
+
+        <div id="filter-menu">
+          <button class="active" onclick="filterProducts('all', this)">
+            Tất Cả
+          </button>
+          <button onclick="filterProducts('nike', this)">NIKE</button>
+          <button onclick="filterProducts('adidas', this)">ADIDAS</button>
+          <button onclick="filterProducts('balance', this)">NEW BALANCE</button>
+        </div>
+
+        <div id="products-grid" class="product-grid"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>Theo dõi chúng tôi:</p>
+        <div class="footer-links">
+          <a href="#">
+            <i class="facebook-icon fa-brands fa-square-facebook"></i>
+            Facebook</a
+          >
+          <a href="#">
+            <i class="instagram-icon fa-brands fa-instagram"></i>
+            Instagram</a
+          >
+          <a href="#">
+            <i class="zalo-icon fa-solid fa-z"></i>
+            Zalo</a
+          >
+        </div>
+        <p style="margin-top: 15px">&copy; 2025 BAROSNEAKER.</p>
+      </div>
+    </footer>
+    <script src="Js/productData.js"></script>
+    <script src="Js/scripts.js"></script>
+    <script src="Js/cart.js"></script>
+    <script
+      src="https://kit.fontawesome.com/32d84c096a.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
